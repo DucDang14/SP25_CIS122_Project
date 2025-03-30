@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
+    public float sprintSpeed;
     public float speed = 8f;
     public float gravity = -9.81f * 2;
     public float jumpHeight = 1.5f;
@@ -53,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
         {
             //Going up
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        //sprint
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            controller.Move(move * sprintSpeed * Time.deltaTime);
         }
 
         // Falling down

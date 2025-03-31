@@ -372,6 +372,7 @@
 "Assets/Scripts/MouseMovement.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/SoundManager.cs"
 "Assets/Scripts/Weapon.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

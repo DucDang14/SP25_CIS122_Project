@@ -10358,7 +10358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f303b26e55a0e4fb016904fd1aed42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingSoundPistol: {fileID: 1234423253}
 --- !u!4 &1234423255
 Transform:
   m_ObjectHideFlags: 0
@@ -10587,6 +10586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7199a4024143a924f958ec0ff1c9f56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenuCanvas: {fileID: 1607261527}
 --- !u!4 &1272542922
 Transform:
   m_ObjectHideFlags: 0

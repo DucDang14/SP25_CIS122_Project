@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class door : MonoBehaviour
 {
     public float interactionDistance;
     public GameObject intText;
     public string doorOpenAnimName, doorCloseAnimName;
 
-    void Update()
+    public void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
-
         if(Physics.Raycast(ray, out hit, interactionDistance))
         {
             if(hit.collider.gameObject.tag == "door")
@@ -20,7 +19,6 @@ public class Door : MonoBehaviour
                 GameObject doorParent = hit.collider.transform.root.gameObject;
                 Animator doorAnim = doorParent.GetComponent<Animator>();
                 intText.SetActive(true);
-
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     if(doorAnim.GetCurrentAnimatorStateInfo(0).IsName(doorOpenAnimName))
@@ -34,6 +32,7 @@ public class Door : MonoBehaviour
                         doorAnim.SetTrigger("open");
                     }
                 }
+
             }
             else
             {
@@ -41,5 +40,4 @@ public class Door : MonoBehaviour
             }
         }
     }
-    
 }

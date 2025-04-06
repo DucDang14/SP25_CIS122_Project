@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool Paused = false;
+    public static bool paused = false;
     public GameObject PauseMenuCanvas;
 
     // Start is called before the first frame update
@@ -17,9 +17,9 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(Paused)
+            if (paused)
             {
                 Play();
             }
@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
     {
         PauseMenuCanvas.SetActive(true);
         Time.timeScale = 0f;
-        Paused = true;
+        paused = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         PauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
-        Paused = false;
+        paused = false;
         Cursor.visible = false;
     }
 

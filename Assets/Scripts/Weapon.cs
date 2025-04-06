@@ -38,8 +38,13 @@ public class Weapon : MonoBehaviour
     public int magazineSize, bulletsLeft;
     public bool isReloading;
 
-
-
+    public enum WeaponModel
+    {
+        Pistol,
+        M4,
+        LaserGun
+    }
+    public WeaponModel thisWeaponModel;
 
 
     public enum ShootingMode
@@ -115,7 +120,10 @@ public class Weapon : MonoBehaviour
         muzzleEffect.GetComponent<ParticleSystem>().Play();
         animator.SetTrigger("RECOIL");
 
-        SoundManager.Instance.shootingSoundPistol.Play();
+        //SoundManager.Instance.shootingSoundPistol.Play();
+
+        SoundManager.Instance.PlayShootingSound(thisWeaponModel);
+
 
         readyToShoot = false;
         Vector3 shootingDirection = CalculateDirectionAndSpread().normalized;
@@ -149,7 +157,9 @@ public class Weapon : MonoBehaviour
     private void Reload()
     {
 
-        SoundManager.Instance.reloadingSoundPistol.Play();
+        SoundManager.Instance.PlayReloadingSound(thisWeaponModel);
+
+        animator.SetTrigger("RELOAD");
 
         isReloading = true;
         Invoke("ReloadCompleted", reloadTime);

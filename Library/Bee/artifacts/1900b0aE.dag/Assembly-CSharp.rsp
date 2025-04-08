@@ -366,6 +366,8 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.38f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/ProgramandoGames/FirstPersonArms/Miscellaneous/ShowCase.cs"
 "Assets/QuickOutline/Scripts/Outline.cs"
+"Assets/ScifiOfficeLite/Scripts/DemoDoor.cs"
+"Assets/ScifiOfficeLite/Scripts/DemoFirstPersonController.cs"
 "Assets/Scripts/AmmoManager.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/Door.cs"

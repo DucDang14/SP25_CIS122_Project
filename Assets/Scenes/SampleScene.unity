@@ -500,7 +500,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &54860301
 MonoBehaviour:
@@ -514,7 +514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193f316dd8a7a7a459912b7109b36eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSlots: []
+  weaponSlots:
+  - {fileID: 1720679822}
+  - {fileID: 1301498636}
   activeWeaponSlot: {fileID: 0}
 --- !u!4 &54860302
 Transform:
@@ -4359,7 +4361,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &261267224
 Transform:
@@ -4375,7 +4377,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1607261528}
-  - {fileID: 1272542922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &263266828
@@ -5038,6 +5039,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: 0}
+  m_PointAction: {fileID: 0}
+  m_MoveAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_TrackedDevicePositionAction: {fileID: 0}
+  m_TrackedDeviceOrientationAction: {fileID: 0}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &305501294
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,7 +5889,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &371176773
 RectTransform:
@@ -6110,7 +6129,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &391716880
 RectTransform:
@@ -6626,7 +6645,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &411203695
 RectTransform:
@@ -6911,7 +6930,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &452591044
 RectTransform:
@@ -7491,7 +7510,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &506622945
 RectTransform:
@@ -9169,7 +9188,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &596240131
 RectTransform:
@@ -9409,7 +9428,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &602323598
 RectTransform:
@@ -9475,7 +9494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1272542921}
+      - m_Target: {fileID: 747753329}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenuButton
         m_Mode: 1
@@ -10609,7 +10628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7199a4024143a924f958ec0ff1c9f56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuCanvas: {fileID: 481886122}
+  PauseMenuCanvas: {fileID: 1607261527}
 --- !u!1 &752157270
 GameObject:
   m_ObjectHideFlags: 0
@@ -11955,7 +11974,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: b581fdbd127292d44ab21c4b16d91d05, type: 3}
 --- !u!4 &838175538 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8875449794350432196, guid: b581fdbd127292d44ab21c4b16d91d05, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8875449794350432198, guid: b581fdbd127292d44ab21c4b16d91d05, type: 3}
   m_PrefabInstance: {fileID: 838175537}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &842817753 stripped
@@ -12789,7 +12808,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &945976493
 RectTransform:
@@ -13116,6 +13135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea350031fa3a9841b61fdd4bba4dd89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionDistance: 0
+  intText: {fileID: 0}
+  doorOpenAnimName: 
+  doorCloseAnimName: 
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15358,7 +15381,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1234423254
 MonoBehaviour:
@@ -15372,6 +15395,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f303b26e55a0e4fb016904fd1aed42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShootingChanel: {fileID: 1234423256}
+  PistolShot: {fileID: 8300000, guid: 846c958230dad9445b2f63fc70bb6c3f, type: 3}
+  M4Shot: {fileID: 8300000, guid: 6098af7f8ef52cf44af9a8c4726ceacd, type: 3}
+  reloadingSoundM4: {fileID: 1234423259}
+  reloadingSoundPistol: {fileID: 1234423258}
+  emptyMagazineSoundPistol: {fileID: 1234423257}
 --- !u!4 &1234423255
 Transform:
   m_ObjectHideFlags: 0
@@ -15955,51 +15984,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1970739360}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &1272542920
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1272542922}
-  - component: {fileID: 1272542921}
-  m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1272542921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272542920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7199a4024143a924f958ec0ff1c9f56e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenuCanvas: {fileID: 0}
---- !u!4 &1272542922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272542920}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 701.1754, y: 142.63512, z: -91.54303}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 261267224}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283594072
 GameObject:
   m_ObjectHideFlags: 0
@@ -19501,6 +19485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106604c8f0b65af4c94cdbb222337db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoDisplay: {fileID: 0}
 --- !u!4 &1552010078
 Transform:
   m_ObjectHideFlags: 0
@@ -20105,7 +20090,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!4 &1607261528
 Transform:
@@ -20803,7 +20788,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1682987335
 MonoBehaviour:
@@ -20817,6 +20802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ac1bdfe9f0cca4ea0b3783f0709dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletImpactEffectPrefab: {fileID: 1232297546442234140, guid: e4164c143839fb64e99e98bfe9034553, type: 3}
 --- !u!4 &1682987336
 Transform:
   m_ObjectHideFlags: 0
@@ -21475,7 +21461,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1726309112
 RectTransform:
@@ -24116,7 +24102,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1839237951
 RectTransform:
@@ -24182,7 +24168,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1272542921}
+      - m_Target: {fileID: 747753329}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -25178,7 +25164,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1901409974
 RectTransform:
@@ -25605,7 +25591,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!224 &1935432624
 RectTransform:
@@ -27699,7 +27685,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &2072273938
 RectTransform:
@@ -28358,7 +28344,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &2100478789
 RectTransform:
@@ -30655,6 +30641,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1
+  tripodSize: 1
+  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Transforms: []
 --- !u!4 &4147297099702087096
 Transform:
   m_ObjectHideFlags: 0
@@ -31886,6 +31879,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1
+  tripodSize: 1
+  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Transforms: []
 --- !u!95 &9048397623724462360
 Animator:
   serializedVersion: 5

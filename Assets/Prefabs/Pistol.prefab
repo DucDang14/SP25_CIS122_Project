@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1364895395466226852}
   - component: {fileID: 5859930372827963077}
   - component: {fileID: 7110221621726160281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Carregador_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3496166380047448546}
   - component: {fileID: 7338091742965070397}
   - component: {fileID: 2539448428264519752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trilha_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9165698721559600890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 4228346581219146812}
   - component: {fileID: 8604856424055647252}
   - component: {fileID: 658042578028656440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4371724498399569698}
   - component: {fileID: 1605896709968612559}
   - component: {fileID: 8686258562202837415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ferrolho_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8585393961341694673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightPistolGrip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 51621504682398053}
   - component: {fileID: 4466954598044673908}
   - component: {fileID: 533457775619229237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cabo_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 2844985803117779352}
   - component: {fileID: 6835094234157855493}
   - component: {fileID: 403064316906270831}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5323,7 +5323,7 @@ GameObject:
   - component: {fileID: 8789526286142287837}
   - component: {fileID: 7151231350024416898}
   - component: {fileID: 638692654439712660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "C\xE3mara_low"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

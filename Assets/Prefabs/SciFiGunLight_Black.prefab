@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3926554392524004758}
   - component: {fileID: 7326715577291959919}
   - component: {fileID: 7136336105580278330}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SciFiGunLight_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2739805081791045932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

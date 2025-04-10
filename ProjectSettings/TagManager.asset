@@ -8,6 +8,9 @@ TagManager:
   - Wall
   - Target
   - Door
+  - Aliens
+  - Waypoints
+  - AlienHand
   layers:
   - Default
   - TransparentFX

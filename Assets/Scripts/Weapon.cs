@@ -1,3 +1,5 @@
+//Written by Duc Anh Dang
+//03/23/2025
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,21 +12,29 @@ using UnityEngine.UIElements;
 public class Weapon : MonoBehaviour
 {
     public bool isActiveWeapon;
+    public int weaponDamage;
 
     //Shooting 
+    [Header("Shooting")]
     public bool isShooting, readyToShoot;
     bool allowReset = true;
     public float shootingDelay = 0.5f;
 
     //Burst
+    [Header("Burst")]
     public int bulletsPerBurst = 3;
     public int burstBulletLeft;
 
+    [Header("Spread")]
     //Spread
     public float spreadIntensity;
+    public float hipSpreadIntensity;
+    public float adsSpreadIntensity;
+
 
     //origin
     //Bullet 
+    [Header("Bullet")]
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public float bulletVelocity = 500f;
@@ -33,7 +43,9 @@ public class Weapon : MonoBehaviour
     public GameObject muzzleEffect;
     internal Animator animator;
 
+
     //Loading
+    [Header("Loading")]
     public float reloadTime;
     public int magazineSize, bulletsLeft;
     public bool isReloading;
@@ -41,6 +53,7 @@ public class Weapon : MonoBehaviour
     public Vector3 spawnPosition;
     public Vector3 spawnRotation;
 
+    bool isADS;
 
     public enum WeaponModel
     {
@@ -68,15 +81,29 @@ public class Weapon : MonoBehaviour
 
         //Loading
         bulletsLeft = magazineSize;
+
+        spreadIntensity = hipSpreadIntensity;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         //empty sound play
-        if (isActiveWeapon) {
+        if (isActiveWeapon)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                EnterADS();
+            }
+
+            if (Input.GetMouseButtonUp(1))
+            {
+                ExitADS();
+
+            }
+
+
 
             GetComponent<Outline>().enabled = false;
 
@@ -120,7 +147,20 @@ public class Weapon : MonoBehaviour
 
 
     }
-
+    private void EnterADS()
+    {
+        animator.SetTrigger("enterADS");
+        isADS = true;
+        HUDManager.Instance.middleDot.SetActive(false);
+        spreadIntensity = adsSpreadIntensity;
+    }
+    private void ExitADS()
+    {
+        animator.SetTrigger("exitADS");
+        isADS = false;
+        HUDManager.Instance.middleDot.SetActive(true);
+        spreadIntensity = hipSpreadIntensity;
+    }
 
 
     private void FireWeapon()
@@ -129,7 +169,17 @@ public class Weapon : MonoBehaviour
 
 
         muzzleEffect.GetComponent<ParticleSystem>().Play();
-        animator.SetTrigger("RECOIL");
+
+        if (isADS)
+        {
+            animator.SetTrigger("RECOIL_ADS");
+        }
+        else
+        {
+            animator.SetTrigger("RECOIL");
+
+        }
+
 
         //SoundManager.Instance.shootingSoundPistol.Play();
 
@@ -141,6 +191,10 @@ public class Weapon : MonoBehaviour
 
         //Instantiate the bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
+
+        Bullet bul = bullet.GetComponent<Bullet>();
+        bul.bulletDamage = weaponDamage;
+
 
         //Pointing the bullet to face the shooting direction
         bullet.transform.forward = shootingDirection;
@@ -163,7 +217,7 @@ public class Weapon : MonoBehaviour
             Invoke("FireWeapon", shootingDelay);
         }
     }
-    
+
     //Reloead
     private void Reload()
     {
@@ -179,7 +233,7 @@ public class Weapon : MonoBehaviour
 
     private void ReloadCompleted()
     {
-        if(WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel) > magazineSize)
+        if (WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel) > magazineSize)
         {
             bulletsLeft = magazineSize;
             WeaponManager.Instance.DecreaseTotalAmmo(bulletsLeft, thisWeaponModel);
@@ -221,11 +275,11 @@ public class Weapon : MonoBehaviour
         }
         Vector3 direction = targetPoint - bulletSpawn.position;
 
-        float x = UnityEngine.Random.Range(-spreadIntensity, spreadIntensity);
+        float z = UnityEngine.Random.Range(-spreadIntensity, spreadIntensity);
         float y = UnityEngine.Random.Range(-spreadIntensity, spreadIntensity);
 
         //Returning the shooting direction and spread
-        return direction + new Vector3(x, y, 0);
+        return direction + new Vector3(0, y, z);
     }
 
     private IEnumerator DestroyBulletAfterTime(GameObject bullet, float delay)
@@ -234,4 +288,5 @@ public class Weapon : MonoBehaviour
         Destroy(bullet);
     }
 }
+
 
